@@ -1,1 +1,175 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><title>记忆转换</title><meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"><meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0"><script src="https://code.jquery.com/jquery-3.1.1.min.js"></script><link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"><link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous"><script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script><style>body{margin:1rem;background-color:#F3F5F7;position:relative}textarea{margin:-8px 0 25px 0;resize:vertical}h5{color:#1e8ccf;text-decoration:underline;cursor:Pointer}#tk{resize:none}.icon{display:none}#content{border:0;overflow:auto}.center button{margin:10px}</style></head><body><div id="topSpan"><p class="text-center icon gb col-xs-3" onclick="fullScreen(2222)"><span class="glyphicon glyphicon-text-height" aria-hidden="true"></span>&nbsp;</p><p class="text-center icon gb col-xs-3" onclick="night()"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>&nbsp;</p><p class="text-center icon gb col-xs-3" onclick="fullScreen(3333)"><span class="glyphicon glyphicon-sort" aria-hidden="true"></span>&nbsp;</p><p class="text-center icon gb col-xs-3" onclick="fullScreen(4444)"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span>&nbsp;</p></div><nav class="navbar navbar-default navbar-fixed-top" role="navigation"><div class="container-fluid"><div class="navbar-header"><button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#example-navbar-collapse"><span class="sr-only">记忆转换工具</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span></button> <a class="navbar-brand" href="#">记忆转换工具</a></div><div class="collapse navbar-collapse" id="example-navbar-collapse"><ul class="nav navbar-nav"><li class="night"><a onclick="night()">日 / 夜</a></li><li><a href="https://zhuanlan.zhihu.com/p/25603437">查看原文</a></li><li><a href="https://www.zhihu.com/people/zi-ding-yi-21-63/answers">关注 / 私信我</a></li></ul><form class="navbar-form navbar-right"><div class="form-group"><input type="text" class="form-control search" placeholder="百度搜索"></div><a class="btn btn-default" onclick="SearchBD()" role="button"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></a></form></div></div></nav><div class="container-fluid content" style="margin-top:70px"><div style="display:none" class="ts text-center alert alert-info alert-dismissible" role="alert"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div><div style="display:none" class="ts1 text-center alert alert-warning alert-dismissible" role="alert"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button> You never try, you never know!</div><div class="text-center row center" style="margin-bottom:25px"><form class="form-inline col-xs-4"><div class="form-group"><label for="mark">隔 字 符 :</label><input type="text" class="form-control" id="mark" placeholder="默认为X"></div></form><form class="form-inline col-xs-4"><div class="form-group"><label for="select2">间 隔 数 :</label><select class="form-control" id="select2" onchange="changeSize()"><option>1</option><option>2</option><option>3</option><option>随机啊</option><option>4</option><option>5</option><option>6</option></select></div></form><form class="form-inline col-xs-4"><div class="form-group"><label for="select3">字 体 号 :</label><select class="form-control" id="select3" onchange="changeFontSize()"><option>14</option><option>16</option><option>18</option><option>20</option><option>22</option><option>24</option><option>26</option><option>28</option><option>30</option></select></div></form><button type="button" class="btn btn-primary change1" onclick="change(1)">中文</button> <button type="button" class="btn btn-warning change2" onclick="change(2)">英文</button> <button type="button" class="btn btn-success change3" onclick="change(3)">日文</button><br><button type="button" class="btn btn-info change4" onclick="change(4)">单词</button> <button type="button" class="btn btn-danger change5" onclick="change(33)">清空</button> <button type="button" class="btn btn-default change6" onclick="toTrend()">方向</button></div><div class="textarea1 row"><div class="col-xs-12"><p class="text-right icon amplify" onclick="fullScreen(0)"><span class="glyphicon glyphicon-fullscreen" aria-hidden="true"></span>&nbsp;</p><textarea class="form-control" rows="15" id="text" placeholder="需要背诵的文本粘贴到这里"></textarea></div><div class="col-xs-12"><p class="text-right icon amplify" onclick="fullScreen(1)"><span class="glyphicon glyphicon-fullscreen" aria-hidden="true"></span>&nbsp;</p><textarea class="form-control" rows="15" id="text1" placeholder="板块一"></textarea></div><div class="col-xs-12"><p class="text-right icon amplify" onclick="fullScreen(2)"><span class="glyphicon glyphicon-fullscreen" aria-hidden="true"></span>&nbsp;</p><textarea class="form-control" rows="15" id="text2" placeholder="板块二"></textarea></div></div></div><textarea style="display:none" class="form-control" id="content"></textarea><div class="text-center" style="color:#337AB7" onclick="location.href=&quot;https://www.zhihu.com/question/27371173/answer/152263546&quot;">via 如何成为记忆高手？ -白诗诗的回答</div><div class="text-center" style="color:#337AB7" onclick="location.href=&quot;https://www.zhihu.com/people/zi-ding-yi-21-63/answers&quot;">@自定义<br><script>function change(t){if(""!=$("#text").val()){if(33==t)return void $("textarea[id^='text']").val("");""!=$("#mark").val().trim()?mark=$("#mark").val():(""==$("#mark").val().trim()&&$("#mark").val(""),mark="X"),$(".tex1").removeClass("col-xs-12").addClass("col-sm-4"),$("textarea").hide(),1==t?(sw=1,changeText1()):2==t?(sw=2,changeText2()):3==t?(sw=3,changeText3()):4==t&&(sw=4,changeText4()),$("textarea,.amplify").not("#tk,#content").show(500)}}function changeText1(){for(var t=$("#text").val().length,e=$("#text").val(),a="",r="",s=0;t>s;s++)if(sj&&(j=Math.ceil(10*Math.random())),s%j){var n=e.charAt(s);reg.test(n)&&reg1.test(n)?(a+=e.charAt(s),r+=mark):(a+=e.charAt(s),r+=e.charAt(s))}else{var n=e.charAt(s);reg.test(n)&&reg1.test(n)?(r+=e.charAt(s),a+=mark):(r+=e.charAt(s),a+=e.charAt(s))}$("#text1").val(a),$("#text2").val(r)}function changeText2(){if(""!=$("#text").val()){var t=$("#text").val().length,e=$("#text").val();e=e.replace(/\s+/g," ");for(var a="",r="",s=0,n=0;t>n;n++){sj&&(j=Math.ceil(10*Math.random())),s+=1;var c=e.indexOf(" ",s+1);if(-1!=c){var l=e.substring(s-1,c);if(n%j)if(!reg.test(l)||reg1.test(l))a+=l,r+=l;else{a+=l;var o=l.charAt(l.length-1);r+=reg.test(o)?" "+mark+" ":" "+mark+" "+o}else if(!reg.test(l)||reg1.test(l))a+=l,r+=l;else{r+=l;var o=l.charAt(l.length-1);a+=reg.test(o)?" "+mark+" ":" "+mark+" "+o}s=c}else{var l=e.substring(s,t);if(n%j)if(!reg.test(l)||reg1.test(l))a+=l,r+=l;else{a+=l;var o=l.charAt(l.length-1);r+=reg.test(o)?" "+mark+" ":" "+mark+" "+o}else if(!reg.test(l)||reg1.test(l))a+=l,r+=l;else{r+=l;var o=l.charAt(l.length-1);a+=reg.test(o)?" "+mark+" ":" "+mark+" "+o}n=t+1}}$("#text1").val(a.replace(/\s+/g," ")),$("#text2").val(r.replace(/\s+/g," "))}}function changeText3(){for(var t=$("#text").val().length,e=$("#text").val(),a="",r="",s=0;t>s;s++)if(sj&&(j=Math.ceil(10*Math.random())),s%j){var n=e.charAt(s);reg2.test(n)?(a+=e.charAt(s),r+=" "+mark+" "):reg.test(n)&&reg1.test(n)?(a+=e.charAt(s),r+=" "+mark+" "):(a+=e.charAt(s),r+=e.charAt(s))}else{var n=e.charAt(s);reg2.test(n)?(r+=e.charAt(s),a+=" "+mark+" "):reg.test(n)&&reg1.test(n)?(r+=e.charAt(s),a+=" "+mark+" "):(r+=e.charAt(s),a+=e.charAt(s))}$("#text1").val(a),$("#text2").val(r)}function changeText4(){for(var t=$("#text").val().length,e=$("#text").val(),a="",r="",s=0;t>s;s++)if(sj&&(j=Math.ceil(10*Math.random())),s%j){var n=e.charAt(s);!reg.test(n)||reg1.test(n)?(a+=e.charAt(s),r+=e.charAt(s)):(a+=e.charAt(s),r+=mark)}else{var n=e.charAt(s);!reg.test(n)||reg1.test(n)?(r+=e.charAt(s),a+=e.charAt(s)):(r+=e.charAt(s),a+=mark)}$("#text1").val(a),$("#text2").val(r)}function changeSize(){"随机啊"==$("#select2").val()?sj=1:(sj=0,j=1*$("#select2").val()+1),1==sw?changeText1():2==sw?changeText2():3==sw?changeText3():4==sw&&changeText4()}function changeFontSize(){size=Number($("#select3").val()),$("textarea").css("font-size",size)}function night(){toNight?($("nav").addClass("navbar-inverse"),$("body,textarea").css({color:"#999db6","background-color":"#1e1e2a"}),toNight=!1):($("nav").removeClass("navbar-inverse"),$("body").css({color:"#333","background-color":"#F3F5F7"}),$("textarea").css({color:"#555","background-color":"#ffffff"}),toNight=!0),window.innerWidth<=768&&$(".navbar-toggle").click()}function SearchBD(){window.open("https://www.baidu.com/s?wd="+$(".search").val())}function fullScreen(t){if(2222==t)return size+=2,32==size&&(size=14),void $("textarea").css("font-size",size);if(4444==t)return $("#content,.gb").hide(),void $(".content,nav").slideDown();if(3333==t)return t=tab+1,3==t&&(t=0),$("#content").val($("textarea:eq("+t+")").val()),void(tab=t);$("nav").hide(),$(".gb,#content").show(),tab=t,$("#content").val($("textarea:eq("+t+")").val());var e=Math.round($(window).height()/25);$("#content").attr("rows",e),$(".content").slideUp()}function toTrend(){$("textarea").hide(),trend?($(".textarea1 div").removeClass("col-xs-12").addClass("col-xs-4"),trend=!trend):($(".textarea1 div").removeClass("col-xs-4").addClass("col-xs-12"),trend=!trend),$("textarea,.amplify").not("#tk,#content").show(500)}$(document).ready(function(){});var mark="X",trend=!0,j=2,reg=/[\w\u4e00-\u9fa5]/,reg1=/[^\u0000-\u00FF]/,reg2=/[\u3040-\u309F\u30A0-\u30FF]/,sw=1,sj=0,size=14,toNight=1,tab=0;</script><script type="text/javascript">var cnzz_protocol="https:"==document.location.protocol?" https://":" http://";document.write(unescape("%3Cspan id='cnzz_stat_icon_1261456749'%3E%3C/span%3E%3Cscript src='"+cnzz_protocol+"s4.cnzz.com/z_stat.php%3Fid%3D1261456749%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));</script></div></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>记忆转换</title>
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+    <script src="js/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="css/change.css">
+</head>
+<body>
+<div id="app" class="">
+    <div id="topSpan" class="navbar-fixed-top" style="margin-top: 10px">
+        <p class="text-center icon gb col-xs-2" onclick="fullScreen(4444)"><img src="img/gb.png"/></p>
+        <p class="text-center icon gb col-xs-2" onclick="fullScreen(2222)"><img src="img/ztdx.png"/></p>
+        <p class="text-center icon gb col-xs-2" onclick="night()"><img src="img/yj.png"/></p>
+        <p class="text-center icon gb col-xs-2" onclick="fullScreen(3333)"><img src="img/sx.png"/></p>
+        <p class="text-center icon gb col-xs-2" onclick="fullScreen(3333)"><img src="img/sc.png"/></p>
+        <p class="text-center icon gb col-xs-2"><a href="collect.html"><img src="img/wdsc.png"/></a></p>
+    </div>
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse"
+                        data-target="#example-navbar-collapse">
+                    <span class="sr-only">记忆转换工具</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">记忆转换工具</a>
+            </div>
+            <div class="collapse navbar-collapse" id="example-navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li class="night active"><a><img src="img/zh.png"/>转换</a></li>
+                    <li><a href="collect.html"><img src="img/wdsc.png"/>我的收藏</a></li>
+                    <li class="night"><a onclick="night()"><img src="img/yj.png"/>日 / 夜 </a></li>
+                    <li><a href="https://zhuanlan.zhihu.com/p/25603437"><img src="img/wz.png"/>查看原文</a></li>
+                    <li><a href="https://www.zhihu.com/people/zi-ding-yi-21-63/answers"><img src="img/gz.png"/>关注 / 私信我</a>
+                    </li>
+                </ul>
+                <form class="navbar-form navbar-right">
+                    <div class="form-group">
+                        <input type="text" class="form-control search" placeholder="百度搜索">
+                    </div>
+                    <a class="btn btn-default" onclick="SearchBD()" role="button"><img style="width: 1em"
+                                                                                       src="img/ss.png"/></a>
+                </form>
+            </div>
+
+        </div>
+    </nav>
+    <div class=" content" style="margin-top: 70px">
+        <div style="" class="col-xs-12 ts1 text-left alert alert-warning alert-dismissible" role="alert">
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            - 新增收藏文本功能<br/>
+            - 收藏后可到 导航栏中 ‘我的收藏’ 里查看<br/>
+            - 收藏仅对当前浏览器有效<br/>
+            - 粘贴文本后请点击对应的转换语言！
+        </div>
+        <div style="display: none" class="ts text-center alert alert-info alert-dismissible" role="alert">
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span
+                    aria-hidden="true">&times;</span></button>
+        </div>
+        <div class="text-center center">
+            <form class="form-inline col-xs-4">
+                <div class="form-group">
+                    <label for="mark">隔 字 符 : </label>
+                    <input type="text" class="form-control" id="mark" placeholder="">
+                </div>
+            </form>
+            <form class="form-inline col-xs-4">
+                <div class="form-group">
+                    <label for="select2">间 隔 数 : </label>
+                    <select class="form-control" id="select2" onchange="changeSize()">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>随机</option>
+                        <option>4</option>
+                        <option>5</option>
+                        <option>6</option>
+                    </select>
+                </div>
+            </form>
+            <form class="form-inline col-xs-4">
+                <div class="form-group">
+                    <label for="select3">字 体 号 : </label>
+                    <select class="form-control" id="select3" onchange="changeFontSize()">
+                        <option>14</option>
+                        <option>17</option>
+                        <option>20</option>
+                        <option>23</option>
+                        <option>26</option>
+                        <option>29</option>
+                        <option>32</option>
+                        <option>35</option>
+                        <option>38</option>
+                    </select>
+                </div>
+            </form>
+        </div>
+        <div style="visibility: hidden">1</div>
+        <div class="btn-group btn-group-justified col-xs-12">
+            <div class="btn-group" role="group" onclick="change(1)">
+                <button type="button" class="btn btn-warning">中文</button>
+            </div>
+            <div class="btn-group" role="group" onclick="change(2)">
+                <button type="button" class="btn btn-primary">英语</button>
+            </div>
+            <div class="btn-group" role="group" onclick="change(3)">
+                <button type="button" class="btn btn-success">日语</button>
+            </div>
+            <div class="btn-group" role="group" onclick="change(4)">
+                <button type="button" class="btn btn-info">单词</button>
+            </div>
+            <div class="btn-group" role="group" onclick="toTrend()">
+                <button type="button" class="btn btn-default">方向</button>
+            </div>
+            <div class="btn-group" role="group" onclick="change(33)">
+                <button type="button" class="btn btn-danger">清空</button>
+            </div>
+        </div>
+        <div style="visibility: hidden">1</div>
+        <div class="textarea1">
+            <div class="col-xs-4">
+                <p class="col-xs-6 text-center icon amplify" onclick="saveText(0)"><img src="img/sc.png"/></p>
+                <p class="col-xs-6 text-center icon amplify" onclick="fullScreen(0)"><img src="img/qp.png"/></p>
+                <textarea class="form-control" rows="15" id="text" placeholder="需要背诵的文本粘贴到这里"></textarea>
+            </div>
+            <div class="col-xs-4">
+                <p class="col-xs-6 text-center icon amplify" onclick="saveText(1)"><img src="img/sc.png"/></p>
+                <p class="col-xs-4 text-center icon amplify" onclick="fullScreen(1)"><img src="img/qp.png"/></p>
+                <textarea class="form-control" rows="15" id="text1" placeholder="板块一"></textarea>
+            </div>
+            <div class="col-xs-4">
+                <p class="col-xs-6 text-center icon amplify" onclick="saveText(2)"><img src="img/sc.png"/></p>
+                <p class="col-xs-6 text-center icon amplify" onclick="fullScreen(2)"><img src="img/qp.png"/></p>
+                <textarea class="form-control" rows="15" id="text2" placeholder="板块二"></textarea>
+            </div>
+        </div>
+    </div>
+
+</div>
+<div id="toast" style="display: none;">
+    <div class="weui_mask_transparent"></div>
+    <div class="weui_toast">
+        <img style="width: 50px;margin: 13px" src="img/ok.png"/>
+        <p class="weui_toast_content"></p>
+    </div>
+</div>
+<div id="toast1" style="display: none;">
+    <div class="weui_mask_transparent"></div>
+    <div class="weui_toast">
+        <img style="width: 50px;margin: 13px" src="img/err.png"/>
+        <p class="weui_toast_content"></p>
+    </div>
+</div>
+<textarea style="display: none;margin-top: 40px" class="form-control" id="content"></textarea>
+<div class="text-center" style="color:#337AB7"><a
+        onclick="location.href='https://www.zhihu.com/question/27371173/answer/152263546'">via 如何成为记忆高手？ -白诗诗的回答</a>
+</div>
+<div class="text-center" style="color:#337AB7"><a
+        onclick="location.href='https://www.zhihu.com/people/zi-ding-yi-21-63/answers'">@自定义</a></div>
+<br>
+
+<script src="js/bootstrap.min.js"></script>
+<script src="js/store.legacy.min.js"></script>
+<script src="js/vue.js"></script>
+<script src="js/Change.common.controller.js"></script>
+<script src="js/Change.index.controller.js"></script>
+</body>
+</html>

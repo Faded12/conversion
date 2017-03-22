@@ -1,0 +1,28 @@
+body{position: relative}
+.nav li img{margin:-4px 12px 0 0}
+textarea{margin: -8px 0 25px 0;resize: vertical;}
+h5{color: #1e8ccf;text-decoration: underline;cursor:Pointer}
+#tk{resize: none;}
+#topSpan{display: none}
+#content{border:0;overflow: auto;}
+/*.center button{margin:10px}*/
+img{width:1em}
+.textarea1 .icon img{margin-bottom:-10px;width: 1em;}
+.icon img{width: 1.2em}
+.box{margin: 70px 15px 0}
+.box img{width:20px}
+.box textarea{margin: 5px 0}
+.textFrame{ border: 2px solid #ececec;padding: 10px;border-radius: 10px;margin-bottom: 15px;height: 88px}
+.weui_toast {
+    position: fixed;
+    z-index: 3;
+    width: 7.6em;
+    min-height: 7.6em;
+    top: 180px;
+    left: 50%;
+    margin-left: -3.8em;
+    background: rgba(40, 40, 40, 0.75);
+    text-align: center;
+    border-radius: 5px;
+    color: #FFFFFF;
+}
