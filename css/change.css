@@ -1,6 +1,6 @@
 body{position: relative}
 .nav li img{margin:-4px 12px 0 0}
-textarea{margin: -8px 0 25px 0;resize: vertical;}
+textarea{resize: vertical;}
 h5{color: #1e8ccf;text-decoration: underline;cursor:Pointer}
 #tk{resize: none;}
 #topSpan{display: none}
