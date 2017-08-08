@@ -1,4 +1,4 @@
-body{position: relative}
+body{position: relative;font-family: "Arial","Microsoft YaHei","黑体","宋体",sans-serif;}
 .nav li img{margin:-4px 12px 0 0}
 textarea{resize: vertical;}
 h5{color: #1e8ccf;text-decoration: underline;cursor:Pointer}
@@ -25,4 +25,13 @@ img{width:1em}
     text-align: center;
     border-radius: 5px;
     color: #FFFFFF;
+}
+.shutDown{
+    text-align: center;
+    color: #BABABA;
+    color: #3cd084;
+    font-size: 14px;
+}
+.shutDown2{
+    color: #BABABA;
 }
