@@ -27,7 +27,7 @@ img{width:1em}
     color: #FFFFFF;
 }
 .shutDown{
-    text-align: center;
+    cursor:pointer;
     color: #BABABA;
     color: #3cd084;
     font-size: 14px;

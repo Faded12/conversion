@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>背个X啊</title>
@@ -9,162 +10,207 @@
     <link rel="stylesheet" href="css/bootstrap-theme.min.css">
     <link rel="stylesheet" href="css/change.css?v=1">
 </head>
+
 <body>
-<div id="app" class="">
-    <div id="topSpan" class="navbar-fixed-top" style="margin-top: 10px">
-        <p class="text-center icon gb col-xs-2" onclick="fullScreen(4444)"><img src="img/gb.png"/></p>
-        <p class="text-center icon gb col-xs-2" onclick="fullScreen(2222)"><img src="img/ztdx.png"/></p>
-        <p class="text-center icon gb col-xs-2" onclick="night()"><img src="img/yj.png"/></p>
-        <p class="text-center icon gb col-xs-2" onclick="fullScreen(3333)"><img src="img/sx.png"/></p>
-        <p class="text-center icon gb col-xs-2" onclick="saveText(3)"><img src="img/sc.png"/></p>
-        <p class="text-center icon gb col-xs-2"><a href="collect.html"><img src="img/wdsc.png"/></a></p>
-    </div>
-    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse"
-                        data-target="#example-navbar-collapse">
-                    <span class="sr-only">背 个 x 啊</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="#">背 个 x 啊</a>
-            </div>
-            <div class="collapse navbar-collapse" id="example-navbar-collapse">
-                <ul class="nav navbar-nav">
-                    <li class="night active"><a><img src="img/zh.png"/>转换</a></li>
-                    <li><a href="collect.html"><img src="img/wdsc.png"/>我的收藏</a></li>
-                    <li class="night"><a onclick="night()"><img src="img/yj.png"/>日 / 夜 </a></li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" style="color: #30d181;font-weight: 600">App下载<span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="https://itunes.apple.com/cn/app/id1221489563" target="_blank">IOS</a></li>
-                            <li><a href="http://m.app.so.com/detail/index?from=qing&id=3866432" target="_blank">Android</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="about.html">关于我们</a></li>
-                </ul>
-            </div>
-
+    <div id="app" class="">
+        <div id="topSpan" class="navbar-fixed-top" style="margin-top: 10px">
+            <p class="text-center icon gb col-xs-2" onclick="fullScreen(4444)">
+                <img src="img/gb.png" />
+            </p>
+            <p class="text-center icon gb col-xs-2" onclick="fullScreen(2222)">
+                <img src="img/ztdx.png" />
+            </p>
+            <p class="text-center icon gb col-xs-2" onclick="night()">
+                <img src="img/yj.png" />
+            </p>
+            <p class="text-center icon gb col-xs-2" onclick="fullScreen(3333)">
+                <img src="img/sx.png" />
+            </p>
+            <p class="text-center icon gb col-xs-2" onclick="saveText(3)">
+                <img src="img/sc.png" />
+            </p>
+            <p class="text-center icon gb col-xs-2">
+                <a href="collect.html">
+                    <img src="img/wdsc.png" />
+                </a>
+            </p>
         </div>
-    </nav>
-    <div class=" content" style="margin-top: 70px">
-        <div class="text-center center">
-            <form class="form-inline col-xs-4">
-                <div class="form-group">
-                    <label for="mark">隔 字 符 : </label>
-                    <input style="width: 80px" type="text" class="form-control" id="mark" placeholder="">
+        <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#example-navbar-collapse">
+                        <h1 class="sr-only">背 个 x 啊</h1>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">背 个 x 啊</a>
                 </div>
-            </form>
-            <form class="form-inline col-xs-4">
-                <div class="form-group">
-                    <label for="select2">间 隔 数 : </label>
-                    <select class="form-control" id="select2" onchange="changeSize()">
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>随机</option>
-                        <option>4</option>
-                        <option>5</option>
-                        <option>6</option>
-                    </select>
+                <div class="collapse navbar-collapse" id="example-navbar-collapse">
+                    <ul class="nav navbar-nav">
+                        <li class="night active">
+                            <a>
+                                <img src="img/zh.png" />转换</a>
+                        </li>
+                        <li>
+                            <a href="collect.html">
+                                <img src="img/wdsc.png" />我的收藏</a>
+                        </li>
+                        <li class="night">
+                            <a onclick="night()">
+                                <img src="img/yj.png" />日 / 夜 </a>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" style="color: #30d181;font-weight: 600">App下载
+                                <span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="https://itunes.apple.com/cn/app/id1221489563" target="_blank">IOS</a>
+                                </li>
+                                <li>
+                                    <a href="http://m.app.so.com/detail/index?from=qing&id=3866432" target="_blank">Android</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="about.html">关于我们</a>
+                        </li>
+                    </ul>
                 </div>
-            </form>
-            <form class="form-inline col-xs-4">
-                <div class="form-group">
-                    <label for="select3">字 体 号 : </label>
-                    <select class="form-control" id="select3" onchange="changeFontSize()">
-                        <option>14</option>
-                        <option>17</option>
-                        <option>20</option>
-                        <option>23</option>
-                        <option>26</option>
-                        <option>29</option>
-                        <option>32</option>
-                        <option>35</option>
-                        <option>38</option>
-                    </select>
+
+            </div>
+        </nav>
+        <div class=" content" style="margin-top: 70px">
+            <p class="bg-danger  col-xs-12">由于此web端是最早期的版本，没有及时更新迭代，功能上有所欠缺，推荐您使用微信小程序 “背个X” 或下载App , 此web端会尽快更新 >_< </p>
+            <div class="text-center center">
+                <form class="form-inline col-xs-4">
+                    <div class="form-group">
+                        <label for="mark">隔 字 符 : </label>
+                        <input style="width: 80px" type="text" class="form-control" id="mark" placeholder="">
+                    </div>
+                </form>
+                <form class="form-inline col-xs-4">
+                    <div class="form-group">
+                        <label for="select2">间 隔 数 : </label>
+                        <select class="form-control" id="select2" onchange="changeSize()">
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>随机</option>
+                            <option>4</option>
+                            <option>5</option>
+                            <option>6</option>
+                        </select>
+                    </div>
+                </form>
+                <form class="form-inline col-xs-4">
+                    <div class="form-group">
+                        <label for="select3">字 体 号 : </label>
+                        <select class="form-control" id="select3" onchange="changeFontSize()">
+                            <option>14</option>
+                            <option>17</option>
+                            <option>20</option>
+                            <option>23</option>
+                            <option>26</option>
+                            <option>29</option>
+                            <option>32</option>
+                            <option>35</option>
+                            <option>38</option>
+                        </select>
+                    </div>
+                </form>
+            </div>
+            <div style="visibility: hidden">1</div>
+            <div class="btn-group btn-group-justified col-xs-12">
+                <div class="btn-group" role="group" onclick="change(1)">
+                    <button type="button" class="btn btn-warning">中文</button>
                 </div>
-            </form>
+                <div class="btn-group" role="group" onclick="change(2)">
+                    <button type="button" class="btn btn-primary">英语</button>
+                </div>
+                <div class="btn-group" role="group" onclick="change(3)">
+                    <button type="button" class="btn btn-success">日语</button>
+                </div>
+                <div class="btn-group" role="group" onclick="change(4)">
+                    <button type="button" class="btn btn-info">单词</button>
+                </div>
+                <div class="btn-group" role="group" onclick="toTrend()">
+                    <button type="button" class="btn btn-default">方向</button>
+                </div>
+                <div class="btn-group" role="group" onclick="change(33)">
+                    <button type="button" class="btn btn-danger">清空</button>
+                </div>
+            </div>
+            <div style="visibility: hidden">1</div>
+            <div class="textarea1">
+                <div class="col-xs-4">
+                    <p class="col-xs-6 text-center icon amplify" onclick="saveText(0)">
+                        <img src="img/sc.png" />
+                    </p>
+                    <p class="col-xs-6 text-center icon amplify" onclick="fullScreen(0)">
+                        <img src="img/qp.png" />
+                    </p>
+                    <textarea class="form-control" rows="13" id="text" placeholder="需要背诵的文本粘贴到这里"></textarea>
+                </div>
+                <div class="col-xs-4">
+                    <p class="col-xs-6 text-center icon amplify" onclick="saveText(1)">
+                        <img src="img/sc.png" />
+                    </p>
+                    <p class="col-xs-6 text-center icon amplify" onclick="fullScreen(1)">
+                        <img src="img/qp.png" />
+                    </p>
+                    <textarea class="form-control" rows="13" id="text1" placeholder="板块一"></textarea>
+                </div>
+                <div class="col-xs-4">
+                    <p class="col-xs-6 text-center icon amplify" onclick="saveText(2)">
+                        <img src="img/sc.png" />
+                    </p>
+                    <p class="col-xs-6 text-center icon amplify" onclick="fullScreen(2)">
+                        <img src="img/qp.png" />
+                    </p>
+                    <textarea class="form-control" rows="13" id="text2" placeholder="板块二"></textarea>
+                </div>
+            </div>
         </div>
-        <div style="visibility: hidden">1</div>
-        <div class="btn-group btn-group-justified col-xs-12">
-            <div class="btn-group" role="group" onclick="change(1)">
-                <button type="button" class="btn btn-warning">中文</button>
-            </div>
-            <div class="btn-group" role="group" onclick="change(2)">
-                <button type="button" class="btn btn-primary">英语</button>
-            </div>
-            <div class="btn-group" role="group" onclick="change(3)">
-                <button type="button" class="btn btn-success">日语</button>
-            </div>
-            <div class="btn-group" role="group" onclick="change(4)">
-                <button type="button" class="btn btn-info">单词</button>
-            </div>
-            <div class="btn-group" role="group" onclick="toTrend()">
-                <button type="button" class="btn btn-default">方向</button>
-            </div>
-            <div class="btn-group" role="group" onclick="change(33)">
-                <button type="button" class="btn btn-danger">清空</button>
-            </div>
-        </div>
-        <div style="visibility: hidden">1</div>
-        <div class="textarea1">
-            <div class="col-xs-4">
-                <p class="col-xs-6 text-center icon amplify" onclick="saveText(0)"><img src="img/sc.png"/></p>
-                <p class="col-xs-6 text-center icon amplify" onclick="fullScreen(0)"><img src="img/qp.png"/></p>
-                <textarea class="form-control" rows="13" id="text" placeholder="需要背诵的文本粘贴到这里"></textarea>
-            </div>
-            <div class="col-xs-4">
-                <p class="col-xs-6 text-center icon amplify" onclick="saveText(1)"><img src="img/sc.png"/></p>
-                <p class="col-xs-6 text-center icon amplify" onclick="fullScreen(1)"><img src="img/qp.png"/></p>
-                <textarea class="form-control" rows="13" id="text1" placeholder="板块一"></textarea>
-            </div>
-            <div class="col-xs-4">
-                <p class="col-xs-6 text-center icon amplify" onclick="saveText(2)"><img src="img/sc.png"/></p>
-                <p class="col-xs-6 text-center icon amplify" onclick="fullScreen(2)"><img src="img/qp.png"/></p>
-                <textarea class="form-control" rows="13" id="text2" placeholder="板块二"></textarea>
-            </div>
-        </div>
-    </div>
 
-</div>
-<div id="toast" style="display: none;">
-    <div class="weui_mask_transparent"></div>
-    <div class="weui_toast">
-        <img style="width: 50px;margin: 13px" src="img/ok.png"/>
-        <p class="weui_toast_content"></p>
     </div>
-</div>
-<div id="toast1" style="display: none;">
-    <div class="weui_mask_transparent"></div>
-    <div class="weui_toast">
-        <img style="width: 50px;margin: 13px" src="img/err.png"/>
-        <p class="weui_toast_content"></p>
+    <div id="toast" style="display: none;">
+        <div class="weui_mask_transparent"></div>
+        <div class="weui_toast">
+            <img style="width: 50px;margin: 13px" src="img/ok.png" />
+            <p class="weui_toast_content"></p>
+        </div>
     </div>
-</div>
-<textarea style="display: none;margin-top: 40px" class="form-control" id="content"></textarea>
-
-<p class="shutDown" onclick="location.href='https://zhuanlan.zhihu.com/p/25603437'">
-    <br/>
-    <br/>
-    via 知乎 : 我所依赖的记忆方法
-</p>
-<p class="shutDown shutDown2">
-    - 搞 事 团 队 -
-</p>
-<!--<div class="text-center" style="color:#337AB7;"><a-->
-        <!--onclick="location.href='https://www.zhihu.com/question/27371173/answer/152263546'">via 如何成为记忆高手？ -白诗诗的回答</a>-->
-<!--</div>-->
-<!--<div class="text-center" style="color:#337AB7"><a-->
-        <!--onclick="location.href='https://www.zhihu.com/people/zi-ding-yi-21-63/answers'">@自定义</a></div>-->
-<!--<br>-->
-<script src="js/bootstrap.min.js"></script>
-<script src="js/store.legacy.min.js"></script>
-<script src="js/vue.js"></script>
-<script src="js/Change.common.controller.js"></script>
-<script src="js/Change.index.controller.js"></script>
-<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1261456749'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s4.cnzz.com/z_stat.php%3Fid%3D1261456749%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));</script>
+    <div id="toast1" style="display: none;">
+        <div class="weui_mask_transparent"></div>
+        <div class="weui_toast">
+            <img style="width: 50px;margin: 13px" src="img/err.png" />
+            <p class="weui_toast_content"></p>
+        </div>
+    </div>
+    <textarea style="display: none;margin-top: 40px" class="form-control" id="content"></textarea>
+    <div class="col-xs-12" style="text-align: center">
+        <a class="shutDown" onclick="location.href='https://zhuanlan.zhihu.com/p/25603437'">
+            <br/>
+            <br/> via 知乎 : 我所依赖的记忆方法
+            </p>
+            <a class="shutDown shutDown2" target="_blank" onclick="location.href='https://www.zhihu.com/people/zi-ding-yi-21-63/answers'">
+                - 自定义 -
+            </a>
+    </div>
+    <!--<div class="text-center" style="color:#337AB7;"><a-->
+    <!--onclick="location.href='https://www.zhihu.com/question/27371173/answer/152263546'">via 如何成为记忆高手？ -白诗诗的回答</a>-->
+    <!--</div>-->
+    <!--<div class="text-center" style="color:#337AB7"><a-->
+    <!--onclick="location.href='https://www.zhihu.com/people/zi-ding-yi-21-63/answers'">@自定义</a></div>-->
+    <!--<br>-->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/store.legacy.min.js"></script>
+    <script src="js/vue.js"></script>
+    <script src="js/Change.common.controller.js"></script>
+    <script src="js/Change.index.controller.js"></script>
+    <script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://"); document.write(unescape("%3Cspan id='cnzz_stat_icon_1261456749'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s4.cnzz.com/z_stat.php%3Fid%3D1261456749%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));</script>
 </body>
+
 </html>
